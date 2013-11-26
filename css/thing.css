@@ -1,0 +1,7 @@
+body {
+	margin: 1em 2em;
+}
+#expression {
+	font-family: monospace;
+	font-size: 24px;
+}

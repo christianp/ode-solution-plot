@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Differential equations</title>
+
+		<!-- jquery -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+		<!-- knockout -->
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
+
+		<!-- normalise.css -->
+		<link rel="stylesheet" href="http://css.cdn.tl/normalize.css"></link>
+
+		<!-- LissaJS -->
+		<script type="text/javascript" src="js/lissajs.js"></script>
+
+		<!-- mathjax -->
+		<script>
+			window.MathJax = {
+				tex2jax: {
+					inlineMath: [['$','$']],
+					displayMath: [['\\[','\\]']],
+					processEscapes: true,
+				},
+				"HTML-CSS": {
+					webFont: "Gyre-Pagella",
+					preferredFont: "Gyre-Pagella"
+				}
+			}
+		</script>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+		<!-- jsxgraph -->
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.98/jsxgraphcore.js"></script>
+		<link rel="stylesheet" href="css/jsxgraph.css"></link>
+
+		<script type="text/javascript" src="js/thing.js"></script>
+		<link rel="stylesheet" href="css/thing.css"></link>
+	</head>
+	<body>
+		<div id="board" style="width: 600px; height: 600px;"></div>
+		<div>
+			<p>$\dfrac{\mathrm{d}y}{\mathrm{d}x} = \;$ <input type="text" id="expression" data-bind="value: expression, valueUpdate: 'afterkeydown'"/></p>
+			<p>
+				<label><input type="checkbox" data-bind="checked: showVectorField"/> Show vector field?</label> <label><input type="checkbox" data-bind="checked: showSolution"/> Show solution?</label>
+			</p>
+		</div>
+	</body>
+</html>
